@@ -28,6 +28,7 @@ class _BookingScreenState extends State<BookingScreen> {
         child: Padding(
           padding: EdgeInsets.all(2.h),
           child: SingleChildScrollView(
+            physics: const BouncingScrollPhysics(),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -83,7 +84,7 @@ class _BookingScreenState extends State<BookingScreen> {
     return TableCalendar(
       focusedDay: selectedDay,
       firstDay: DateTime.utc(2021, 11, 7),
-      lastDay: DateTime.utc(2021, 11, 14),
+      lastDay: DateTime.utc(2022, 11, 14),
       calendarFormat: CalendarFormat.twoWeeks,
       startingDayOfWeek: StartingDayOfWeek.monday,
       onDaySelected: (DateTime selectDay, DateTime focusDay) {
@@ -195,6 +196,11 @@ class _TimeGridState extends State<TimeGrid> {
     '10:00 AM',
     '10:30 AM',
     '11:00 AM',
+    '11:30 AM','09:00 AM',
+    '09:30 AM',
+    '10:00 AM',
+    '10:30 AM',
+    '11:00 AM',
     '11:30 AM',
   ];
 
@@ -216,6 +222,7 @@ class _TimeGridState extends State<TimeGrid> {
           height: 32.h,
           child: GridView.builder(
               itemCount: bookingTime.length,
+              physics: const BouncingScrollPhysics(),
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 crossAxisSpacing: 15.0,

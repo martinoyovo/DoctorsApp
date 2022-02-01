@@ -1,10 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/date_symbol_data_file.dart';
+import 'package:intl/intl.dart' as intl;
 import 'package:sizer/sizer.dart';
 import 'custom_nav_bar.dart';
 
 void main() {
+  intl.Intl.systemLocale;
   runApp(const MyApp());
 }
 

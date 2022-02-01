@@ -53,7 +53,7 @@ class HomeWidgets extends StatelessWidget {
           height: 2.0.h,
         ),
         const HomeDoctorTile(
-          doctorName: 'Dr. ChatBot',
+          doctorName: 'Dr. Kodjo',
           doctorImage:
               'https://images.pexels.com/photos/5733421/pexels-photo-5733421.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
           doctorType: 'Assistant',
@@ -78,7 +78,7 @@ class HomeSearchBar extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            'Let\'s find your doctor',
+            'Trouvez un spécialiste de santé',
             style: Theme.of(context).textTheme.headline4!.copyWith(
                   fontWeight: FontWeight.normal,
                 ),
@@ -162,8 +162,9 @@ class HomeCalendar extends StatelessWidget {
                 child: SizedBox(
                   width: MediaQuery.of(context).size.width,
                   child: TableCalendar(
+                    //locale: 'fr',
                     firstDay: DateTime.utc(2021, 11, 7),
-                    lastDay: DateTime.utc(2021, 11, 14),
+                    lastDay: DateTime.utc(2022, 11, 14),
                     focusedDay: DateTime.now(),
                     calendarFormat: CalendarFormat.week,
                     startingDayOfWeek: StartingDayOfWeek.monday,
@@ -258,7 +259,7 @@ class HomeDoctorTile extends StatelessWidget {
           Row(
             children: [
               Text(
-                'Available for your need',
+                'Disponible pour vous',
                 style: Theme.of(context).textTheme.bodyText2!.copyWith(
                       color: const Color(0xff1651DA),
                     ),
